@@ -37,7 +37,7 @@ app.post("/api/notes", (req, res) => {
 });
 
 //Api routes to get notes
-app.get("/notes", (req, res) => {
+app.get("/api/notes", (req, res) => {
     fs.readFile(path.join(__dirname, "./db/db.json"), (err, data) => {
         if (err) throw err;
         let noteInfo = JSON.parse(data)
