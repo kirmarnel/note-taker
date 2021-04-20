@@ -4,7 +4,7 @@ const fs = require('fs');
 //Set up server
 const path = require('path');
 const app = express();
-const PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
